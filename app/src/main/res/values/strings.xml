@@ -13,5 +13,6 @@
     <string name="copyrights">All Copyrights Reserved</string>
     <string name="title_activity_search_bus">SearchBusActivity</string>
     <string name="title_activity_nearest_stop">NearestStop</string>
+    <string name="title_activity_special_schedules">SpecialSchedules</string>
 
 </resources>

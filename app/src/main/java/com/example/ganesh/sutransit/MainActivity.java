@@ -1,7 +1,6 @@
 package com.example.ganesh.sutransit;
 
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,23 +9,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.Date;
-import java.util.HashMap;
-
-import android.support.v4.app.Fragment;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -216,8 +204,8 @@ public class MainActivity extends ActionBarActivity implements MainFragment.OnBu
                 @Override
                 public void onClick(View view){
                     Toast.makeText(getActivity(),"Special Schedules is Clicked!",Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(view.getContext(),AboutMe.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(view.getContext(),SpecialSchedules.class);
+                    startActivity(intent);
                 }
             });
 
