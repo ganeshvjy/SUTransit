@@ -27,12 +27,13 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 
 
-public class NearestStop extends Activity implements OnMapReadyCallback {
+public class NearestStop extends MainActivity implements OnMapReadyCallback {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_nearest_stop);
 
         MapFragment mapFragment = (MapFragment) getFragmentManager()

@@ -1,6 +1,7 @@
 package com.example.ganesh.sutransit;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 import android.app.Activity;
@@ -53,6 +54,8 @@ public class MainFragment extends Fragment {
                     case R.id.SpecialSchedules:
                         break;
                     case R.id.BusTracker:
+                        Intent intent = new Intent(view.getContext(),BusTracker.class);
+                        startActivity(intent);
                         break;
 
                     default:

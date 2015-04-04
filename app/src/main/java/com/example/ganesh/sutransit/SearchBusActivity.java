@@ -19,14 +19,7 @@ import android.os.Build;
 import android.widget.RelativeLayout;
 
 
-public class SearchBusActivity extends ActionBarActivity {
-
-    private RelativeLayout mDrawer;
-    private DrawerLayout mDrawerLayout;
-    private RecyclerView mDrawerList;
-    private ActionBarDrawerToggle mDrawerToggle;
-    private DrawerAdapter mDrawerAdapter;
-    private Toolbar mToolbar;
+public class SearchBusActivity extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,44 +27,6 @@ public class SearchBusActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_search_bus);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.drawable.ic_launcher);
-
-        mDrawer = (RelativeLayout) findViewById(R.id.drawer);
-        mDrawerList = (RecyclerView) findViewById(R.id.drawer_list);
-        mDrawerList.setLayoutManager(new LinearLayoutManager(this));
-
-        mDrawerAdapter = new DrawerAdapter(this,  (new DrawerData()).getDrawerList());
-
-        mDrawerAdapter.SetOnItemClickListener(new DrawerAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(View v, int position) {
-                selectItem(position);
-            }
-
-        });
-        mDrawerList.setAdapter(mDrawerAdapter);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
-        mDrawerToggle = new ActionBarDrawerToggle(
-                this,                  /* host Activity */
-                mDrawerLayout,         /* DrawerLayout object */
-                mToolbar,  /* nav drawer image to replace 'Up' caret */
-                R.string.drawerOpen,  /* "open drawer" description for accessibility */
-                R.string.drawerClose  /* "close drawer" description for accessibility */
-        ) {
-            public void onDrawerClosed(View view) {
-                super.onDrawerClosed(view);
-            }
-
-            public void onDrawerOpened(View drawerView) {
-                super.onDrawerOpened(drawerView); // creates call to onPrepareOptionsMenu()
-            }
-        };
-        mDrawerLayout.setDrawerListener(mDrawerToggle);
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()

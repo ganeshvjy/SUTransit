@@ -6,8 +6,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.ganesh.sutransit"
-        minSdkVersion 19
-        targetSdkVersion 21
+        minSdkVersion 15
+        targetSdkVersion 15
         versionCode 1
         versionName "1.0"
     }

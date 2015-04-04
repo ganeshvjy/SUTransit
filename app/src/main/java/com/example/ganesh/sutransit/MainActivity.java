@@ -195,8 +195,8 @@ public class MainActivity extends ActionBarActivity implements MainFragment.OnBu
                 @Override
                 public void onClick(View view){
                     Toast.makeText(getActivity(),"Notify Me is Clicked!",Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(view.getContext(),AboutMe.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(view.getContext(),NotifyMe.class);
+                    startActivity(intent);
                 }
             });
 
@@ -209,14 +209,14 @@ public class MainActivity extends ActionBarActivity implements MainFragment.OnBu
                 }
             });
 
-            busTracker.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View view){
-                    Toast.makeText(getActivity(),"Bus Tracker is Clicked!",Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(view.getContext(),AboutMe.class);
-                    //startActivity(intent);
-                }
-            });
+            //busTracker.setOnClickListener(new View.OnClickListener(){
+            //    @Override
+            //    public void onClick(View view){
+            //       Toast.makeText(getActivity(),"Bus Tracker is Clicked!",Toast.LENGTH_SHORT).show();
+            //        Intent intent = new Intent(view.getContext(),BusTracker.class);
+            //        startActivity(intent);
+            //    }
+            //});
             return rootView;
         }
     }

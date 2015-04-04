@@ -14,5 +14,7 @@
     <string name="title_activity_search_bus">SearchBusActivity</string>
     <string name="title_activity_nearest_stop">NearestStop</string>
     <string name="title_activity_special_schedules">SpecialSchedules</string>
+    <string name="title_activity_notify_me">NotifyMe</string>
+    <string name="title_activity_bus_tracker">BusTracker</string>
 
 </resources>
